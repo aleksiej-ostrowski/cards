@@ -1,0 +1,92 @@
+<!--    
+     
+# ------------------------------ #    
+#                                #    
+#  version 0.0.1                 #    
+#                                #    
+#  Aleksiej Ostrowski, 2023      #    
+#                                #    
+#  https://aleksiej.com          #    
+#                                #    
+# ------------------------------ #      
+    
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>cards</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="template/pics/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="template/pics/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="template/pics/favicon-16x16.png">
+    <link rel="manifest" href="template/pics/site.webmanifest">
+    <link
+      rel="stylesheet"
+      href="template/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="template/css/for_bootstrap.css?v=2" />
+  </head>
+  <body class="d-flex flex-column h-100">
+    <main role="main" class="flex-shrink-0">
+
+      {% for (slide_number, text_front, text_back) in slides: %}
+
+      <div class="container" id="slide_{{slide_number}}" style="display: none">
+
+        <div class="card bg-info text-white card-front mb-3">
+          <!-- <img src="pics/py1.jpg" class="card-img-top" alt="..." /> -->
+          <div class="card-body">
+              <h5 class="card-title">Front</h5>
+              <hr/>
+              <p class="card-text"><h1>{{text_front}}</h1></p>
+          </div>
+        </div>
+
+        <div
+          class="card bg-info text-white card-back mb-3"
+          style="display: none"
+        >
+          <div class="card-body">
+              <h5 class="card-title">Back</h5>
+              <hr/>
+              <p class="card-text"><h1>{{text_back}}</h1></p>
+          </div>
+        </div>
+
+      </div>
+
+      {% endfor %}
+
+    </main>
+
+    <footer class="footer mt-auto py-3">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group">
+          <button
+            id="b_pr"
+            type="button"
+            class="btn btn-sm btn-outline-secondary b100"
+          >
+            Previous
+          </button>
+          <button
+            id="b_nx"
+            type="button"
+            class="btn btn-sm btn-outline-secondary b100"
+          >
+            Next
+          </button>
+          <button
+            id="b_up"
+            type="button"
+            class="btn btn-sm btn-outline-secondary b100"
+          >
+            &#8645;
+          </button>
+        </div>
+      </div>
+    </footer>
+
+    <script src="template/js/card.js?v=1" defer></script>
+  </body>
+</html>

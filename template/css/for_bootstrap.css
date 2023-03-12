@@ -1,0 +1,71 @@
+/*    
+     
+# ------------------------------ #    
+#                                #    
+#  version 0.0.1                 #    
+#                                #    
+#  Aleksiej Ostrowski, 2023      #    
+#                                #    
+#  https://aleksiej.com          #    
+#                                #    
+# ------------------------------ #      
+    
+*/  
+
+
+body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #dddddd;
+  /*
+  background-image: url("../fon/fon.jpeg");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
+  */
+}
+
+.container {
+  width: 100%;
+  /* max-width: 330px; */
+  margin: auto;
+  position: relative;
+  box-sizing: border-box;
+  /* height: auto; */
+  /* padding: 10px;    
+  font-size: 16px; */
+}
+
+.card {
+  /*  
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+  */
+  width: 750px;
+  height: 500px;
+  color: #080000!important;
+}
+
+/*
+.card-front,
+.card-back {
+ -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; 
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+*/
+
+.b100 {
+  width: 100px;
+}
